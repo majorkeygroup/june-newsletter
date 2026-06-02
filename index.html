@@ -1,0 +1,1127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inland NW Real Estate | June 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --ink: #1a1a1a;
+    --cream: #faf8f4;
+    --warm-mid: #ece8e1;
+    --pine: #262524;       /* charcoal — replaces the old pine green as the dark brand block */
+    --rust: #9a8f7e;
+    --gold: #bdb9b1;       /* Major Key Group gold */
+    --muted: #8a8074;
+    --border: #e3ddd3;
+  }
+
+  body {
+    background: #eceae4;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--ink);
+    padding: 20px;
+  }
+
+  .wrapper {
+    width: 100%;
+    max-width: 816px;
+    margin: 0 auto;
+  }
+
+  /* ── MASTHEAD ── */
+  .masthead {
+    background: var(--pine);
+    padding: 44px 48px 36px;
+    position: relative;
+    overflow: hidden;
+  }
+  .masthead::after {
+    content: '';
+    position: absolute;
+    bottom: -40px; right: -40px;
+    width: 180px; height: 180px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.04);
+  }
+  .masthead-eyebrow {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 12px;
+  }
+  .masthead-title {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 46px;
+    font-weight: 600;
+    line-height: 1.05;
+    letter-spacing: 0.5px;
+    color: #fff;
+    margin-bottom: 6px;
+  }
+  .masthead-title em {
+    font-style: italic;
+    color: #bdb9b1;
+  }
+  .masthead-rule {
+    width: 48px;
+    height: 2px;
+    background: #bdb9b1;
+    margin: 16px 0 0;
+  }
+  .masthead-sub {
+    font-size: 13px;
+    color: rgba(255,255,255,0.55);
+    margin-top: 14px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .masthead-sub span::before { content: '— '; }
+
+  /* ── DIVIDER ── */
+  .rule {
+    height: 1px;
+    background: var(--border);
+    margin: 0;
+  }
+
+  /* ── INTRO BAR ── */
+  .intro-bar {
+    background: #bdb9b1;
+    padding: 22px 48px;
+    color: #2b261d;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 18px;
+    line-height: 1.55;
+    font-style: italic;
+  }
+
+  /* ── SECTION WRAPPER ── */
+  .section {
+    background: var(--cream);
+    padding: 36px 48px;
+    border-bottom: 1px solid var(--border);
+  }
+  .section:last-child { border-bottom: none; }
+
+  .section-label {
+    font-size: 9.5px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--rust);
+    margin-bottom: 18px;
+  }
+
+  h2 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: 0.3px;
+    margin-bottom: 14px;
+    color: var(--ink);
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 1.85;
+    color: #3d352c;
+    margin-bottom: 12px;
+  }
+  p:last-child { margin-bottom: 0; }
+
+  /* ── MARKET STATS GRID ── */
+  .stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: var(--border);
+    margin: 24px 0;
+    border: 1px solid var(--border);
+  }
+  .stat-cell {
+    background: var(--cream);
+    padding: 20px 22px;
+  }
+  .stat-cell.pine-bg {
+    background: var(--pine);
+    color: #fff;
+  }
+  .stat-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .stat-cell.pine-bg .stat-number { color: #fff; }
+  .stat-label {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    color: var(--muted);
+    text-transform: uppercase;
+  }
+  .stat-cell.pine-bg .stat-label { color: rgba(255,255,255,0.6); }
+  .stat-note {
+    font-size: 11px;
+    color: var(--muted);
+    margin-top: 4px;
+  }
+  .stat-cell.pine-bg .stat-note { color: rgba(255,255,255,0.5); }
+  .up { color: #2d7a4a; }
+  .down { color: var(--rust); }
+
+  /* ── TWO-COL SECTION (Spokane vs CDA) ── */
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-top: 20px;
+  }
+  .col-card {
+    border-left: 3px solid var(--gold);
+    padding-left: 16px;
+  }
+  .col-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  .col-card p { font-size: 13px; }
+
+  /* ── TIPS LIST ── */
+  .tips-list {
+    list-style: none;
+    margin-top: 16px;
+  }
+  .tips-list li {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--warm-mid);
+    font-size: 14px;
+    line-height: 1.7;
+    color: #3d352c;
+  }
+  .tips-list li:last-child { border-bottom: none; padding-bottom: 0; }
+  .tip-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--gold);
+    min-width: 28px;
+    line-height: 1.2;
+  }
+  .tip-content strong {
+    display: block;
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 2px;
+    color: var(--ink);
+  }
+
+  /* ── EVENTS ── */
+  .events-list { margin-top: 16px; }
+  .event-item {
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--warm-mid);
+  }
+  .event-item:last-child { border-bottom: none; padding-bottom: 0; }
+  .event-date-block {
+    background: var(--pine);
+    color: #fff;
+    text-align: center;
+    padding: 8px 12px;
+    min-width: 54px;
+    flex-shrink: 0;
+  }
+  .event-month {
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.6);
+  }
+  .event-day {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+  .event-title {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 3px;
+  }
+  .event-details {
+    font-size: 12.5px;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+  .event-tag {
+    display: inline-block;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    background: var(--warm-mid);
+    color: var(--muted);
+    padding: 2px 7px;
+    margin-right: 6px;
+    border-radius: 2px;
+  }
+
+  /* ── SPOTLIGHT PULLQUOTE ── */
+  .pullquote {
+    background: var(--pine);
+    color: #fff;
+    padding: 30px 40px;
+    margin: 28px -48px;
+    position: relative;
+  }
+  .pullquote::before {
+    content: '"';
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 80px;
+    color: rgba(255,255,255,0.15);
+    position: absolute;
+    top: -10px; left: 20px;
+    line-height: 1;
+  }
+  .pullquote p {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #e8e0d0;
+    margin-bottom: 10px;
+  }
+  .pullquote cite {
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.45);
+    font-style: normal;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: var(--ink);
+    padding: 32px 48px;
+    color: rgba(255,255,255,0.5);
+    font-size: 11.5px;
+    line-height: 1.8;
+  }
+  .footer strong {
+    display: block;
+    color: #fff;
+    font-size: 15px;
+    font-family: 'Cormorant Garamond', serif;
+    margin-bottom: 6px;
+  }
+  .footer a { color: var(--gold); text-decoration: none; }
+  .footer-cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+  }
+  .footer-disclaimer {
+    margin-top: 24px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    font-size: 10.5px;
+    color: rgba(255,255,255,0.3);
+    line-height: 1.7;
+  }
+
+  /* ── TABLET (541–815px) ── */
+  @media (min-width: 541px) and (max-width: 815px) {
+    body { padding: 14px; }
+    .masthead, .section, .intro-bar, .footer { padding-left: 36px; padding-right: 36px; }
+    .masthead { padding-top: 38px; padding-bottom: 32px; }
+    .masthead-title { font-size: 40px; }
+    h2 { font-size: 26px; }
+    .pullquote { margin-left: -36px; margin-right: -36px; padding: 28px 34px; }
+  }
+
+  /* ── MOBILE (≤540px) ── */
+  @media (max-width: 540px) {
+    body { padding: 0; }
+    .masthead, .section, .intro-bar, .footer { padding-left: 24px; padding-right: 24px; }
+    .masthead { padding-top: 32px; padding-bottom: 28px; }
+    .masthead-title { font-size: 34px; }
+    .intro-bar { font-size: 16px; }
+    h2 { font-size: 24px; }
+    .pullquote { margin-left: -24px; margin-right: -24px; padding: 24px; }
+    .pullquote p { font-size: 16px; }
+    .two-col, .footer-cols, .stats-grid { grid-template-columns: 1fr; }
+    .footer > div:first-child { flex-wrap: wrap; }
+  }
+</style>
+</head>
+<body>
+<div class="wrapper">
+
+  <!-- MASTHEAD -->
+  <div class="masthead">
+    <div class="masthead-eyebrow">Major Key Group · Monthly Real Estate Report</div>
+    <div class="masthead-title">Inland <em>Northwest</em><br>Real Estate</div>
+    <div class="masthead-rule"></div>
+    <div class="masthead-sub">
+      <span>June 2026</span>
+      <span>Spokane &amp; Coeur d'Alene</span>
+    </div>
+  </div>
+
+  <!-- INTRO BAR -->
+  <div class="intro-bar">
+    Summer is on. May closed with the fastest Spokane sales pace in nearly a year (14-day median cumulative DOM), Kootenai's median pushed past $600K for the first time since last summer, and June brings Hoopfest, Car d'Lane, Ironman 70.3, and a stack of patio-season openings. Here is what the May data told us and what to watch as the summer window unfolds.
+  </div>
+
+  <!-- MARKET SNAPSHOT -->
+  <div class="section">
+    <div class="section-label">Market Snapshot</div>
+    <h2>Where the Market Stands Right Now</h2>
+
+    <p>May is the latest fully reported month, and the data shifted decisively away from the buyer-friendly Q1 pattern. Spokane closed 546 homes at a 14-day median cumulative DOM, Kootenai cleared 271 closings with pace tightening on every tier, and the 30-year mortgage rate finished the month at 6.53% per Freddie Mac PMMS. The Kootenai median pushed past $600K for the first time since June 2025; Spokane's median ticked back to $450K after a slow first quarter. June data publishes in early July; the directional signals point to a similar pattern.</p>
+
+    <!-- SPOKANE STATS -->
+    <div style="font-size:10px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--pine);margin:24px 0 10px;padding-bottom:6px;border-bottom:2px solid var(--pine);">Spokane Co.</div>
+    <div class="stats-grid">
+      <div class="stat-cell pine-bg">
+        <div class="stat-number">$450K</div>
+        <div class="stat-label">Median Sale Price</div>
+        <div class="stat-note">May 2026 · down 2.2% YoY</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-number">14 <span style="font-size:16px">days</span></div>
+        <div class="stat-label">Median Cumulative DOM</div>
+        <div class="stat-note">May 2026 · +2 days vs May 2025 · fastest since May '25</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-number">2.4 <span style="font-size:16px">mo.</span></div>
+        <div class="stat-label">Months Supply</div>
+        <div class="stat-note">Down from 3.3 mo. in Feb · firming up</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-number">546</div>
+        <div class="stat-label">Closed Sales</div>
+        <div class="stat-note">May 2026 · 687 in May 2025 · down 21%</div>
+      </div>
+    </div>
+
+    <!-- KOOTENAI STATS -->
+    <div style="font-size:10px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--pine);margin:28px 0 10px;padding-bottom:6px;border-bottom:2px solid var(--pine);">Kootenai Co.</div>
+    <div class="stats-grid">
+      <div class="stat-cell pine-bg">
+        <div class="stat-number">$602K</div>
+        <div class="stat-label">Median Sale Price</div>
+        <div class="stat-note">May 2026 · up 7.0% YoY</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-number">51 <span style="font-size:16px">days</span></div>
+        <div class="stat-label">Median Days on Market</div>
+        <div class="stat-note">May 2026 · down from 58 a year ago</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-number">2.7 <span style="font-size:16px">mo.</span></div>
+        <div class="stat-label">Months Supply</div>
+        <div class="stat-note">May 2026 · seller-leaning territory</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-number">271</div>
+        <div class="stat-label">Closed Sales</div>
+        <div class="stat-note">May 2026 · 311 in May 2025 · down 13%</div>
+      </div>
+    </div>
+
+    <div class="two-col">
+      <div class="col-card">
+        <h3>Spokane Co.</h3>
+        <p>Fourteen-day cumulative medians explain the story. Well-prepped, well-priced homes in the $350K to $500K band are moving inside two weeks even when you account for relist history, and 40% of May closings were under $400K (the FHA and first-time-buyer sweet spot). Conv financing made up 59% of closings; cash held steady at 12%. The 21% drop in volume against May 2025 looks worse than it feels: total units pending at month-end sat at 864, the highest since last August.</p>
+      </div>
+      <div class="col-card">
+        <h3>Kootenai Co.</h3>
+        <p>Kootenai's median moved up while pace tightened. The county logged 271 closings (down 13% YoY) and days-on-market fell to 51, the fastest May since 2024. Discount-from-original held at 1.8%. Out-of-area demand kept the $600K to $800K band the largest single tier (24% of closings), and the under-$500K layer (25% of closings) keeps thinning. New construction was a non-factor in May (zero NC closings recorded), which leaves a floor under resale pricing across every tier.</p>
+      </div>
+    </div>
+
+
+    <!-- INLINE CHARTS -->
+    <div style="margin-top:28px;">
+      <div style="font-size:9.5px;font-weight:500;letter-spacing:3px;text-transform:uppercase;color:#bdb9b1;margin-bottom:14px;">Charts &amp; Data</div>
+
+      <!-- Area sub-tabs -->
+      <div style="display:flex;gap:5px;margin-bottom:10px;">
+        <button onclick="showArea('spk',this)" id="abtn-spk" style="font-size:10px;font-weight:500;padding:4px 12px;border:1px solid #262524;border-radius:3px;background:#262524;color:#fff;cursor:pointer;">Spokane Co.</button>
+        <button onclick="showArea('ktn',this)" id="abtn-ktn" style="font-size:10px;font-weight:500;padding:4px 12px;border:1px solid #e3ddd3;border-radius:3px;background:transparent;color:#8a8074;cursor:pointer;">Kootenai Co.</button>
+      </div>
+
+      <!-- Metric tabs -->
+      <div style="display:flex;gap:5px;margin-bottom:16px;">
+        <button onclick="showMetric('prices',this)" id="mbtn-prices" style="font-size:10px;font-weight:500;padding:4px 12px;border:1px solid #bdb9b1;border-radius:3px;background:#bdb9b1;color:#fff;cursor:pointer;">Home Prices</button>
+        <button onclick="showMetric('market',this)" id="mbtn-market" style="font-size:10px;font-weight:500;padding:4px 12px;border:1px solid #e3ddd3;border-radius:3px;background:transparent;color:#8a8074;cursor:pointer;">Market Conditions</button>
+        <button onclick="showMetric('activity',this)" id="mbtn-activity" style="font-size:10px;font-weight:500;padding:4px 12px;border:1px solid #e3ddd3;border-radius:3px;background:transparent;color:#8a8074;cursor:pointer;">Sales Activity</button>
+      </div>
+
+      <!-- Chart canvases — one per area+metric combo -->
+      <div style="position:relative;width:100%;height:220px;">
+        <canvas id="chart-spk-prices"></canvas>
+        <canvas id="chart-ktn-prices" style="display:none;position:absolute;top:0;left:0;width:100%;height:100%;"></canvas>
+        <canvas id="chart-spk-market" style="display:none;position:absolute;top:0;left:0;width:100%;height:100%;"></canvas>
+        <canvas id="chart-ktn-market" style="display:none;position:absolute;top:0;left:0;width:100%;height:100%;"></canvas>
+        <canvas id="chart-spk-activity" style="display:none;position:absolute;top:0;left:0;width:100%;height:100%;"></canvas>
+        <canvas id="chart-ktn-activity" style="display:none;position:absolute;top:0;left:0;width:100%;height:100%;"></canvas>
+      </div>
+
+      <!-- Legend -->
+      <div id="legend-prices" style="display:flex;gap:16px;flex-wrap:wrap;margin-top:10px;font-size:10px;color:#8a8074;">
+        <span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:2px;background:#185F9F;display:inline-block;"></span>Spokane Co.</span>
+        <span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:2px;background:#bdb9b1;display:inline-block;"></span>Kootenai Co.</span>
+      </div>
+      <div id="legend-market" style="display:none;flex-wrap:wrap;gap:16px;margin-top:10px;font-size:10px;color:#8a8074;">
+        <span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:2px;background:#185F9F;display:inline-block;"></span>Days on market</span>
+        <span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:2px;border-top:2px dashed #85B7EB;display:inline-block;"></span>Months supply</span>
+      </div>
+      <div id="legend-activity" style="display:none;flex-wrap:wrap;gap:16px;margin-top:10px;font-size:10px;color:#8a8074;">
+        <span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:10px;border-radius:2px;background:rgba(38,37,36,0.6);display:inline-block;"></span>Closed sales</span>
+        <span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:2px;background:#bdb9b1;display:inline-block;"></span>Pending sales</span>
+      </div>
+
+      <p style="font-size:10px;color:#8a8074;margin-top:10px;">Sources: Spokane REALTORS® · MLS of CDA Regional REALTORS® / InfoSparks · Data through May 2026</p>
+
+      <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+      <script>
+      (function(){
+        var g='rgba(0,0,0,0.06)',tc='#8a8074';
+        var mxs={grid:{color:g},ticks:{color:tc,font:{size:9},maxRotation:45,autoSkip:true,maxTicksLimit:12}};
+        var ys=function(cb){return{grid:{color:g},ticks:{color:tc,font:{size:9},callback:cb}};};
+        var ml=['Apr\'23','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec','Jan\'24','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec','Jan\'25','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec','Jan\'26','Feb','Mar','Apr','May'];
+        var opts=function(){};  // unused, kept for compatibility
+
+        // HOME PRICES — Spokane Co. + Kootenai Co. on one chart, monthly Apr 2023–May 2026
+        new Chart(document.getElementById('chart-spk-prices'),{type:'line',data:{labels:ml,datasets:[
+          {label:'Spokane Co.',data:[413,421,430,428,429,415,404,415,381,380,400,428,431,430,434,430,430,430,435,427,421,390,415,415,432,460,450,440,436,425,430,430,405,420,415,415,432,450],borderColor:'#185F9F',backgroundColor:'rgba(24,95,165,0.06)',tension:0.35,fill:true,pointRadius:1.5,borderWidth:2},
+          {label:'Kootenai Co.',data:[551,550,545,556,550,551,557,525,520,500,534,538,550,570,550,550,525,530,540,544,530,541,572.5,550,560,562.5,565,595,584,580,587.5,590,586,575,559.5,559,581,602],borderColor:'#bdb9b1',backgroundColor:'transparent',tension:0.35,fill:false,pointRadius:1.5,borderWidth:2}
+        ]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:mxs,y:{...ys(v=>'$'+Math.round(v)+'K'),min:380,max:640}}}});
+
+        // KOOTENAI PRICES — standalone view
+        new Chart(document.getElementById('chart-ktn-prices'),{type:'line',data:{labels:ml,datasets:[
+          {data:[551,550,545,556,550,551,557,525,520,500,534,538,550,570,550,550,525,530,540,544,530,541,572.5,550,560,562.5,565,595,584,580,587.5,590,586,575,559.5,559,581,602],borderColor:'#bdb9b1',backgroundColor:'rgba(189,185,177,0.08)',tension:0.35,fill:true,pointRadius:1.5,borderWidth:2}
+        ]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:mxs,y:{...ys(v=>'$'+Math.round(v)+'K'),min:480,max:640}}}});
+
+        // MARKET CONDITIONS — Spokane monthly DOM + months supply
+        new Chart(document.getElementById('chart-spk-market'),{type:'line',data:{labels:ml,datasets:[
+          {data:[10,7,8,10,14,18,21,23,28,32,29,14,12,8,10,13,18,23,19,24,27,28,36,25,14,12,14,19,25,24,31,38,42,56,59,43,29,14],borderColor:'#185F9F',tension:0.35,fill:false,pointRadius:1.5,borderWidth:2,yAxisID:'y'},
+          {data:[1.0,0.9,0.8,0.8,1.0,1.2,1.5,1.8,2.0,2.2,2.5,2.7,2.5,2.4,2.3,2.2,2.0,1.9,2.0,2.2,2.5,2.8,3.0,3.2,3.0,2.9,2.7,2.5,2.4,2.4,2.5,2.7,3.0,3.2,3.3,3.0,2.7,2.4],borderColor:'#85B7EB',borderDash:[4,3],tension:0.35,fill:false,pointRadius:1.5,borderWidth:1.5,yAxisID:'y2'}
+        ]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:mxs,y:{...ys(v=>v+'d'),min:0,max:80,position:'left'},y2:{position:'right',grid:{display:false},ticks:{color:tc,font:{size:9},callback:v=>v.toFixed(1)+'mo'},min:0,max:5}}}});
+
+        new Chart(document.getElementById('chart-ktn-market'),{type:'line',data:{labels:ml,datasets:[
+          {data:[60,52,56,60,62,71,72,83,91,101,86,68,61,56,58,64,64,78,92,81,94,102,80,66,53,58,60,61,68,69,84,84,84,106,71,63,57,51],borderColor:'#bdb9b1',tension:0.35,fill:false,pointRadius:1.5,borderWidth:2,yAxisID:'y'},
+          {data:[3.2,3.9,4.1,4.4,4.6,4.4,4.0,3.6,2.7,2.7,2.7,2.8,3.4,4.0,4.3,4.4,4.6,4.4,3.9,3.5,2.7,2.5,2.4,2.3,2.6,2.8,3.2,3.6,3.8,4.1,4.4,4.0,3.7,3.2,2.6,2.4,2.5,2.7],borderColor:'#85B7EB',borderDash:[4,3],tension:0.35,fill:false,pointRadius:1.5,borderWidth:1.5,yAxisID:'y2'}
+        ]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:mxs,y:{...ys(v=>v+'d'),min:0,max:120,position:'left'},y2:{position:'right',grid:{display:false},ticks:{color:tc,font:{size:9},callback:v=>v.toFixed(1)+'mo'},min:0,max:6}}}});
+
+        // SALES ACTIVITY — Spokane monthly closed + pending
+        new Chart(document.getElementById('chart-spk-activity'),{type:'bar',data:{labels:ml,datasets:[
+          {data:[584,740,812,693,791,680,618,519,468,57,326,497,538,648,621,624,619,567,595,468,470,69,369,488,560,687,641,617,629,578,583,475,481,57,379,507,527,546],backgroundColor:'rgba(24,95,165,0.6)',yAxisID:'y'},
+          {data:[615,775,840,720,815,705,640,545,495,90,365,525,565,675,650,650,645,595,620,495,500,110,400,510,585,710,665,640,650,605,610,500,510,90,400,530,553,573],type:'line',borderColor:'#85B7EB',backgroundColor:'transparent',pointRadius:1.5,borderWidth:2,yAxisID:'y',tension:0.3}
+        ]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:mxs,y:{...ys(v=>v.toLocaleString()),min:0,max:900}}}});
+
+        new Chart(document.getElementById('chart-ktn-activity'),{type:'bar',data:{labels:ml,datasets:[
+          {data:[207,266,317,319,293,273,270,211,207,145,188,238,275,325,296,329,318,319,299,273,262,196,216,229,265,311,320,328,322,344,326,256,232,200,206,238,255,271],backgroundColor:'rgba(189,185,177,0.45)',yAxisID:'y'},
+          {data:[245,295,340,335,310,295,290,230,225,165,210,265,295,345,315,345,335,335,315,290,280,220,240,250,290,335,345,350,345,365,345,275,250,225,230,260,280,295],type:'line',borderColor:'#262524',backgroundColor:'transparent',pointRadius:1.5,borderWidth:2,yAxisID:'y',tension:0.3}
+        ]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:mxs,y:{...ys(v=>v.toLocaleString()),min:0,max:420}}}});
+
+        var curArea='spk', curMetric='prices';
+        function updateChart(){
+          ['spk','ktn'].forEach(function(a){
+            ['prices','market','activity'].forEach(function(m){
+              var el=document.getElementById('chart-'+a+'-'+m);
+              el.style.display=(a===curArea&&m===curMetric)?'block':'none';
+              if(a===curArea&&m===curMetric) el.style.position='relative';
+              else el.style.position='absolute';
+            });
+          });
+          // legends
+          ['prices','market','activity'].forEach(function(m){
+            var l=document.getElementById('legend-'+m);
+            l.style.display=m===curMetric?'flex':'none';
+          });
+        }
+        window.showArea=function(a,btn){
+          curArea=a;
+          document.querySelectorAll('[id^="abtn-"]').forEach(function(b){
+            b.style.background='transparent';b.style.color='#8a8074';b.style.borderColor='#e3ddd3';
+          });
+          btn.style.background='#262524';btn.style.color='#fff';btn.style.borderColor='#262524';
+          updateChart();
+        };
+        window.showMetric=function(m,btn){
+          curMetric=m;
+          document.querySelectorAll('[id^="mbtn-"]').forEach(function(b){
+            b.style.background='transparent';b.style.color='#8a8074';b.style.borderColor='#e3ddd3';
+          });
+          btn.style.background='#bdb9b1';btn.style.color='#fff';btn.style.borderColor='#bdb9b1';
+          updateChart();
+        };
+        updateChart();
+      })();
+      </script>
+    </div>
+  </div>
+
+
+  <!-- PULLQUOTE -->
+  <div class="section" style="padding-top:0; padding-bottom:0; background:var(--cream);">
+    <div class="pullquote">
+      <p>The recovery is happening, just more slowly. With rates near 6.5%, expect 4% sales growth this year, not 14%.</p>
+      <cite>Lawrence Yun, Chief Economist, National Association of Realtors · Revised 2026 Forecast, April 2026</cite>
+    </div>
+  </div>
+
+  <!-- SELLER TIPS -->
+  <div class="section">
+    <div class="section-label">For Sellers</div>
+    <h2>5 Things Every Seller Should Know in June</h2>
+    <p>May rewarded sellers who priced correctly out of the gate. Spokane's median cumulative DOM dropped to 14 days, the fastest reading since May 2025, and Kootenai cleared 51 days for the first time since 2024. The catch: buyers walked away from anything that looked over-asked. Here is how to position the rest of the summer window.</p>
+
+    <ul class="tips-list">
+      <li>
+        <div class="tip-num">1</div>
+        <div class="tip-content">
+          <strong>The May data confirms it: price-on-arrival wins.</strong>
+          Spokane sellers who landed at or just under comp gave up only 0.08% from list and closed in 14 days (cumulative DOM, the metric that includes any prior listing periods). The ones who reduced mid-listing absorbed an average 1.16% cut from their original asking. The 1% gap is real money on a $450K home.
+        </div>
+      </li>
+      <li>
+        <div class="tip-num">2</div>
+        <div class="tip-content">
+          <strong>List into the summer window, not after it.</strong>
+          Closed-sale volume is highest June through August every year in both counties. Listing in early-to-mid June puts you in front of the largest buyer pool of the year before family-move-by-school-start pressure forces decisions.
+        </div>
+      </li>
+      <li>
+        <div class="tip-num">3</div>
+        <div class="tip-content">
+          <strong>The first weekend matters more than the next four.</strong>
+          With months-supply at 2.4 in Spokane and 2.7 in Kootenai, the market is still leaning toward sellers in the under-$600K range. Stack showings into the first 72 hours: pre-launched photos, scheduled open house, agent open invitations. A first-weekend offer is worth more than two weeks of activity.
+        </div>
+      </li>
+      <li>
+        <div class="tip-num">4</div>
+        <div class="tip-content">
+          <strong>Don't price for the headline, price for the band.</strong>
+          The $400K to $499K band was Spokane's largest in May at 150 closings (28% of total). The $500K to $599K band cleared 88. Sitting on the wrong side of a round number ($510K vs $499K) can cost you the bulk of the buyer pool because buyers shop in price filters, not on a sliding scale.
+        </div>
+      </li>
+      <li>
+        <div class="tip-num">5</div>
+        <div class="tip-content">
+          <strong>Concessions are negotiable; price reductions are remembered.</strong>
+          Offering a $5,000 rate buydown or closing-cost credit moves a deal without resetting your listing's history. Once you cut price on the MLS, every future buyer sees the breadcrumb. Lead with concessions, hold the line on price until the data forces a change.
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <!-- BUYER TIPS -->
+  <div class="section">
+    <div class="section-label">For First-Time Buyers</div>
+    <h2>Your Window Just Got Narrower</h2>
+    <p>The buyer's edge that defined Q1 is fading fast. Inventory is still ample at 2.4 to 3.1 months across the region, but May's 14-day cumulative-DOM medians in Spokane mean the best homes are gone before you can schedule a second showing. Here is how to compete.</p>
+
+    <ul class="tips-list">
+      <li>
+        <div class="tip-num">1</div>
+        <div class="tip-content">
+          <strong>Pre-approved with a local lender, not just a quote.</strong>
+          Listing agents accept offers that include local lender contact lines first. Out-of-state mortgage shops add 24-48 hours of friction in a market where a 14-day cumulative DOM means the home is closing before they can return your loan officer's call.
+        </div>
+      </li>
+      <li>
+        <div class="tip-num">2</div>
+        <div class="tip-content">
+          <strong>FHA is still 15% of Spokane closings.</strong>
+          In May, 83 of 546 Spokane closings (15%) were FHA. That share is healthy and the loan still wins in the under-$400K segment, which posted 57 closings under $300K plus 129 in the $300K-$399K band. If you are using FHA, target homes that have been on market 21-plus days, where sellers have already absorbed the showing burnout and are open to non-cash offers.
+        </div>
+      </li>
+      <li>
+        <div class="tip-num">3</div>
+        <div class="tip-content">
+          <strong>Post Falls and Hayden are the affordability story in Kootenai Co.</strong>
+          Kootenai's countywide median crossed $602K in May, but the bulk of under-$500K inventory is concentrated in Post Falls and Hayden, with newer construction and quick I-90 access. First-time buyers in Idaho should be touring those two markets first; the lake-city premium for Coeur d'Alene proper rarely pencils out unless waterfront access is non-negotiable.
+        </div>
+      </li>
+      <li>
+        <div class="tip-num">4</div>
+        <div class="tip-content">
+          <strong>Rate buydowns are back on the table.</strong>
+          With the 30-year holding in the 6.4% to 6.5% range through May, sellers are increasingly open to 2-1 temporary buydowns as a closing-cost concession. A 2-1 buydown drops your effective Year 1 rate to roughly 4.5%, freeing roughly $300-$400 of monthly payment on a $400K loan. Ask. The worst they say is no.
+        </div>
+      </li>
+      <li>
+        <div class="tip-num">5</div>
+        <div class="tip-content">
+          <strong>Inspect for what insurance will charge you for.</strong>
+          Homeowner's insurance carriers in Eastern Washington and North Idaho are sharply pricing wildfire risk, roof age, and electrical panel type (especially Federal Pacific and Zinsco). Before you fall in love, have your agent pull a recent insurance quote on the actual property; an extra $1,500 a year on premiums is a hidden price increase.
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <!-- MARKET CONCERN -->
+  <div class="section">
+    <div class="section-label">Watch Out For</div>
+    <h2>What's Worth Watching Heading Into Summer</h2>
+    <ul class="tips-list">
+      <li>
+        <div class="tip-num">⚠</div>
+        <div class="tip-content">
+          <strong>Yun cut his 2026 sales forecast from 14% to 4%.</strong>
+          In April, NAR's chief economist downgraded his existing-home-sales growth projection by 10 percentage points, citing higher-than-expected rates and the oil-price shock. May's regional volume dropped 21% YoY in Spokane and 13% in Kootenai. Translation: the 2026 recovery is real but smaller than originally telegraphed.
+        </div>
+      </li>
+      <li>
+        <div class="tip-num">⚠</div>
+        <div class="tip-content">
+          <strong>Wildfire-season insurance reviews start now.</strong>
+          May through October is the carrier review window in Eastern Washington and North Idaho. Several carriers are non-renewing properties in wildland-urban-interface zones (Five Mile, Mead, parts of north Kootenai). If you own in these areas, request a renewal quote in June, not in August when claims volume forces underwriter friction.
+        </div>
+      </li>
+      <li>
+        <div class="tip-num">⚠</div>
+        <div class="tip-content">
+          <strong>Kootenai inventory is concentrated in the $600K-plus tier.</strong>
+          Of the 271 May Kootenai closings, only 67 (25%) were under $500K. The county's median crossed $600K for the first time since June 2025 not because every home is more expensive, but because the affordable inventory cleared first. Watch for the second half of the year to see whether builders backfill the under-$500K layer or it stays thin.
+        </div>
+      </li>
+      <li>
+        <div class="tip-num">⚠</div>
+        <div class="tip-content">
+          <strong>Mortgage rates trended up through May.</strong>
+          The 30-year fixed moved from 6.36% on May 14 to 6.53% by May 28, per Freddie Mac PMMS. That 17 basis-point move adds roughly $35 a month to a $400K loan. Buyers shopping in June should run payments at 6.75% to leave room, not at the rate they were quoted in April.
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <!-- EVENTS -->
+  <div class="section">
+    <div class="section-label">Community &amp; Events</div>
+    <h2>June Around Spokane</h2>
+    <p>Hoopfest is the headliner, but the run-up is loaded: USA soccer watch parties at Riverfront, Lilac Bowl summer concerts, food-truck Tuesdays, and a full slate at the Pavilion. Here is what to put on the calendar.</p>
+
+    <div class="events-list">
+
+      <div class="event-item">
+        <div class="event-date-block">
+          <div class="event-month">Jun</div>
+          <div class="event-day">2</div>
+        </div>
+        <div>
+          <div class="event-title">Food Truck Tuesdays at Riverfront · Opening Day</div>
+          <div class="event-details">
+            <span class="event-tag">Spokane</span><span class="event-tag">Food &amp; Drink</span>
+            11 AM-2 PM · Rotating local food trucks every Tuesday through August. A reliable downtown lunch all summer with seating along the river and a different vendor lineup each week. Free entry.
+          </div>
+        </div>
+      </div>
+
+      <div class="event-item">
+        <div class="event-date-block">
+          <div class="event-month">Jun</div>
+          <div class="event-day">5</div>
+        </div>
+        <div>
+          <div class="event-title">First Friday Spokane</div>
+          <div class="event-details">
+            <span class="event-tag">Spokane</span><span class="event-tag">Arts</span>
+            5-8 PM · Downtown Spokane galleries and shops. Monthly gallery walk featuring new exhibitions across 20-plus venues, live music in shop windows, and late-night dining specials. Free, family-friendly, and the best way to scout the downtown arts scene.
+          </div>
+        </div>
+      </div>
+
+      <div class="event-item">
+        <div class="event-date-block">
+          <div class="event-month">Jun</div>
+          <div class="event-day">19</div>
+        </div>
+        <div>
+          <div class="event-title">USA vs Australia · World Cup Fan Zone</div>
+          <div class="event-details">
+            <span class="event-tag">Spokane</span><span class="event-tag">Sports</span>
+            All day · GESA Pavilion, Riverfront Park. $5 tickets cover full-day entry, food trucks, beer garden, DJ, family activities, and live big-screen broadcast of the USA-Australia World Cup match. A summer Spokane sports landmark.
+          </div>
+        </div>
+      </div>
+
+      <div class="event-item">
+        <div class="event-date-block">
+          <div class="event-month">Jun</div>
+          <div class="event-day">27</div>
+        </div>
+        <div>
+          <div class="event-title">Hoopfest 2026 · The Main Event</div>
+          <div class="event-details">
+            <span class="event-tag">Spokane</span><span class="event-tag">Sports</span>
+            June 27-28 · Downtown Spokane. The world's largest 3-on-3 outdoor basketball tournament. 6,000-plus teams, 27,000-plus players, 250,000-plus spectators across 50 city blocks. Expect street closures across the downtown core all weekend; plan parking and dining accordingly.
+          </div>
+        </div>
+      </div>
+
+      <div class="event-item">
+        <div class="event-date-block">
+          <div class="event-month">Jun</div>
+          <div class="event-day">28</div>
+        </div>
+        <div>
+          <div class="event-title">Lilac Bowl Summer Concert Series · Opening Night</div>
+          <div class="event-details">
+            <span class="event-tag">Spokane</span><span class="event-tag">Music</span>
+            7 PM · Lilac Bowl, Riverfront Park. The free outdoor summer concert series kicks off in late June and runs through August. Lineup posts at my.spokanecity.org/riverfrontspokane.
+          </div>
+        </div>
+      </div>
+
+      <div class="event-item">
+        <div class="event-date-block">
+          <div class="event-month">Jul</div>
+          <div class="event-day">4</div>
+        </div>
+        <div>
+          <div class="event-title">Riverfront 4th of July · Save the Date</div>
+          <div class="event-details">
+            <span class="event-tag">Spokane</span><span class="event-tag">Family</span>
+            Independence Day · Riverfront Park. Free admission. Live music starting late afternoon and one of the largest fireworks shows in Eastern Washington over the Spokane River. Plan to be in position by 7 PM.
+          </div>
+        </div>
+      </div>
+
+      <div class="event-item">
+        <div class="event-date-block">
+          <div class="event-month">Aug</div>
+          <div class="event-day">TBD</div>
+        </div>
+        <div>
+          <div class="event-title">Blessing in Disguise Music Festival</div>
+          <div class="event-details">
+            <span class="event-tag">Spokane</span><span class="event-tag">Festival</span>
+            The Podium · Inaugural one-day festival co-headlined by Macklemore and AJR with 20 acts across four stages. Watch for August date and on-sale announcements at theblessingfest.com.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- CDA EVENTS -->
+  <div class="section">
+    <div class="section-label">Community &amp; Events</div>
+    <h2>June Around Coeur d'Alene</h2>
+    <p>CDA's June is a marquee month for the lake city: farmers' market season hitting peak, Car d'Lane cruise weekend, ArtWalk, flea markets along Sherman, and Ironman 70.3 weekend. Plan ahead; weekend lodging goes fast.</p>
+
+    <div class="events-list">
+
+      <div class="event-item">
+        <div class="event-date-block">
+          <div class="event-month">Jun</div>
+          <div class="event-day">3</div>
+        </div>
+        <div>
+          <div class="event-title">Kootenai County Farmers' Market · Peak Season</div>
+          <div class="event-details">
+            <span class="event-tag">CDA</span><span class="event-tag">Family</span>
+            Wednesdays 4-7 PM at Riverstone (CDA) and Saturdays 9 AM-1:30 PM at the Hwy 95 &amp; Prairie corner (Hayden). June is peak supply month: local strawberries, asparagus, early stone fruit, and the full lineup of local growers and makers. Free entry, dog-friendly.
+          </div>
+        </div>
+      </div>
+
+      <div class="event-item">
+        <div class="event-date-block">
+          <div class="event-month">Jun</div>
+          <div class="event-day">12</div>
+        </div>
+        <div>
+          <div class="event-title">Downtown CDA ArtWalk · June</div>
+          <div class="event-details">
+            <span class="event-tag">CDA</span><span class="event-tag">Free</span>
+            5-8 PM · Sherman Avenue galleries and shops. Second-Friday-of-the-month series. June lineup typically pairs with live music outside several galleries and Sherman Avenue dining specials.
+          </div>
+        </div>
+      </div>
+
+      <div class="event-item">
+        <div class="event-date-block">
+          <div class="event-month">Jun</div>
+          <div class="event-day">14</div>
+        </div>
+        <div>
+          <div class="event-title">CDA Flea Market</div>
+          <div class="event-details">
+            <span class="event-tag">CDA</span><span class="event-tag">Shopping</span>
+            10 AM-3 PM · Museum of North Idaho, 720 E. Young Ave. Second-and-last-Sundays series. The June dates draw the biggest vendor turnout of the year; arrive early for first picks.
+          </div>
+        </div>
+      </div>
+
+      <div class="event-item">
+        <div class="event-date-block">
+          <div class="event-month">Jun</div>
+          <div class="event-day">19</div>
+        </div>
+        <div>
+          <div class="event-title">Car d'Lane · 35th Annual Cruise</div>
+          <div class="event-details">
+            <span class="event-tag">CDA</span><span class="event-tag">Community</span>
+            6 PM · Downtown Coeur d'Alene. Presented by Dave Smith GMC. Hundreds of classic and custom cars cruise Sherman Avenue Friday evening with the full show on Saturday. One of the largest free car-show weekends in the Pacific Northwest.
+          </div>
+        </div>
+      </div>
+
+      <div class="event-item">
+        <div class="event-date-block">
+          <div class="event-month">Jun</div>
+          <div class="event-day">21</div>
+        </div>
+        <div>
+          <div class="event-title">Ironman 70.3 Coeur d'Alene</div>
+          <div class="event-details">
+            <span class="event-tag">CDA</span><span class="event-tag">Sports</span>
+            7 AM swim start at City Beach. 2,000-plus triathletes complete a 1.2-mile swim, 56-mile bike loop through the Palouse hills, and a 13.1-mile run finishing at McEuen Park. Best spectator spots: City Beach (swim exit, 6:45 AM), Sherman/Lakeside intersection (bike, 9-11 AM), McEuen finish line (11 AM-2 PM).
+          </div>
+        </div>
+      </div>
+
+      <div class="event-item">
+        <div class="event-date-block">
+          <div class="event-month">Jun</div>
+          <div class="event-day">21</div>
+        </div>
+        <div>
+          <div class="event-title">Father's Day on Lake Coeur d'Alene</div>
+          <div class="event-details">
+            <span class="event-tag">CDA</span><span class="event-tag">Family</span>
+            All weekend · The single busiest tourist Sunday of June at the lake. Boat rentals at Independence Point, lakefront brunches at Beverly's or Cedars Floating Restaurant, or a round at Circling Raven. Book dining reservations a week ahead; Father's Day is the second-busiest restaurant day of the year in CDA after Mother's Day.
+          </div>
+        </div>
+      </div>
+
+      <div class="event-item">
+        <div class="event-date-block">
+          <div class="event-month">Jun</div>
+          <div class="event-day">28</div>
+        </div>
+        <div>
+          <div class="event-title">CDA Flea Market · Last Sunday</div>
+          <div class="event-details">
+            <span class="event-tag">CDA</span><span class="event-tag">Shopping</span>
+            10 AM-3 PM · Museum of North Idaho. The June closer of the month's flea market run. Coincides with peak weekend tourism; come early.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FOODIE SECTION -->
+  <div class="section">
+    <div class="section-label">Food &amp; Drink</div>
+    <h2>New &amp; Notable: Patio-Season Openings</h2>
+    <p>June is when the Inland Northwest food scene really turns on. Patios open, outdoor service expands, and the most-watched 2026 openings start landing. Here is the short list worth knowing for date night, family dinner, or a long Friday lunch.</p>
+
+    <ul class="tips-list">
+      <li>
+        <div class="tip-num" style="font-size:15px; color: var(--rust);">🥂</div>
+        <div class="tip-content">
+          <strong>June &amp; Co. - Downtown Spokane (Opens This Month)</strong>
+          The next concept from the Gander &amp; Ryegrass team at 123 N. Wall. The most anticipated Spokane opening of 2026. Cocktail-forward dining room, intimate seating, and a menu built around regional producers. Watch their socials for the official debut.
+        </div>
+      </li>
+      <li>
+        <div class="tip-num" style="font-size:15px; color: var(--rust);">🧇</div>
+        <div class="tip-content">
+          <strong>People's Waffle - Coeur d'Alene (Now Open)</strong>
+          The Spokane-born gluten-free waffle shop opened its second North Idaho location in May. Sweet and savory builds, sandwich-on-waffle creations, plus a kid-friendly menu. A weekend brunch winner for Sherman Avenue.
+        </div>
+      </li>
+      <li>
+        <div class="tip-num" style="font-size:15px; color: var(--rust);">🍗</div>
+        <div class="tip-content">
+          <strong>Konala - Near Gonzaga University (Now Open)</strong>
+          The Post Falls-based Hawaiian-inspired fast-casual concept opened its second Spokane location April 30 near Gonzaga. Build-your-own bowls, plates, and tacos. A fast lunch option for North Spokane and Gonzaga-area showings.
+        </div>
+      </li>
+      <li>
+        <div class="tip-num" style="font-size:15px; color: var(--rust);">🍺</div>
+        <div class="tip-content">
+          <strong>No-Li Brewhouse · Patio &amp; Riverfront Series</strong>
+          The Spokane brewery's outdoor space along the river is one of the best patios in the city. Their Egyptian-style spring release is still pouring and the summer rotating taps start landing this month. Worth a sunset stop after a downtown showing.
+        </div>
+      </li>
+      <li>
+        <div class="tip-num" style="font-size:15px; color: var(--rust);">🍕</div>
+        <div class="tip-content">
+          <strong>Spokane Slice - Downtown Spokane (Saranac Commons)</strong>
+          The Talotti family's hometown pizza institution at 19 W. Main inside Saranac Commons. New York-style slice, family recipe, open lunch through late night. The reliable downtown bite, perfect mid-Hoopfest weekend.
+        </div>
+      </li>
+      <li>
+        <div class="tip-num" style="font-size:15px; color: var(--rust);">🍝</div>
+        <div class="tip-content">
+          <strong>The Temple Tavern - Garland District</strong>
+          Opened earlier this year inside the historic Masonic Temple at 706 W. Garland. Fresh pasta, hand-tossed pizzas, and one of the best craft-cocktail programs north of downtown. The Garland District's most ambitious addition in years.
+        </div>
+      </li>
+      <li>
+        <div class="tip-num" style="font-size:15px; color: var(--rust);">🥃</div>
+        <div class="tip-content">
+          <strong>Coeur d'Alene Resort · Lakeside Patio Season</strong>
+          The CDA Resort patio reopens at full summer service in June with the Beverly's lakefront menu and the dock-side bar in full swing. The view at golden hour is the single best dinner setting in North Idaho. Reservations strongly recommended on Car d'Lane, Ironman, and 4th of July weekends.
+        </div>
+      </li>
+    </ul>
+
+    <p style="margin-top: 18px; font-size: 13px; color: var(--muted); font-style: italic;">Pro tip: if you are house-hunting, June is the right month to walk a neighborhood at multiple times of day. Sherman Avenue (CDA) at sunset feels very different from Sherman at 9 AM brunch. Garland and South Perry both come alive on Friday evenings. The right neighborhood feels right at every hour, not just the one your showing was scheduled in.</p>
+  </div>
+
+  <!-- SPRING HIKES -->
+  <div class="section">
+    <div class="section-label">Get Outside</div>
+    <h2>Peak Summer · Lakes, Trails &amp; Long Light</h2>
+    <p>June flips the switch. The lakes are warm, the upper trails are open, and Schweitzer is spinning chairlifts for summer hikers and bikers. Here is the June pick list, split by county.</p>
+
+    <div style="font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--pine);margin:20px 0 10px;padding-bottom:5px;border-bottom:2px solid var(--pine);">Spokane Co.</div>
+    <ul class="tips-list">
+      <li>
+        <div class="tip-num">🥾</div>
+        <div class="tip-content">
+          <strong>Mount Spokane Summit Trail · 5 mi · Moderate</strong>
+          By June, every trail in the park is open. The summit views stretch from the Selkirks to the Cascades on clear days, and June is peak wildflower season on the ridge (lupine, paintbrush, balsamroot). Discover Pass required. <em>Trailhead: Mt. Spokane State Park, Trail 140.</em>
+        </div>
+      </li>
+      <li>
+        <div class="tip-num">🚣</div>
+        <div class="tip-content">
+          <strong>Liberty Lake · Swim, SUP, &amp; Sunset</strong>
+          The most accessible swim lake in Spokane County, warm enough for full-day swims by mid-June. Public beach, picnic tables, and standup paddleboard rentals on weekends. Drive from downtown is 25 minutes. Discover Pass required. <em>Liberty Lake Regional Park.</em>
+        </div>
+      </li>
+      <li>
+        <div class="tip-num">🚴</div>
+        <div class="tip-content">
+          <strong>Centennial Trail · End to End · 37 mi</strong>
+          The fully paved Spokane River corridor from Nine Mile Falls to the Idaho border. Pick a 5-10 mile segment or commit to the whole thing on a long Saturday. June light extends to nearly 9 PM, so even an after-dinner ride feels generous. Free.
+        </div>
+      </li>
+      <li>
+        <div class="tip-num">🛶</div>
+        <div class="tip-content">
+          <strong>Little Spokane River Paddle · 7 mi · Easy</strong>
+          The classic beginner paddle. Put in at St. George's School or Indian Painted Rocks, drift downstream to Nine Mile, watch for bald eagles and great blue herons. Best when river levels settle in June. Shuttle needed. <em>Put-in: Little Spokane River Natural Area.</em>
+        </div>
+      </li>
+    </ul>
+
+    <div style="font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--pine);margin:24px 0 10px;padding-bottom:5px;border-bottom:2px solid var(--pine);">Kootenai Co. / Coeur d'Alene</div>
+    <ul class="tips-list">
+      <li>
+        <div class="tip-num">🚣</div>
+        <div class="tip-content">
+          <strong>Lake Coeur d'Alene · Open Season</strong>
+          The lake hits the comfortable 60s by mid-June and the marina services come into full swing. Boat rentals at Independence Point, paddleboard at Sanders Beach, fishing charters out of Hayden Lake. The single most identity-defining experience in North Idaho. Reservations strongly recommended weekends.
+        </div>
+      </li>
+      <li>
+        <div class="tip-num">🥾</div>
+        <div class="tip-content">
+          <strong>Tubbs Hill · 2 mi · Easy</strong>
+          The downtown CDA lakefront loop is the area's most-walked trail for a reason: 120 acres of pine forest, multiple beach access points, and views of the resort tower and lake. June light makes the back-side coves photo-worthy. Free. <em>Trailhead: McEuen Park.</em>
+        </div>
+      </li>
+      <li>
+        <div class="tip-num">⛰️</div>
+        <div class="tip-content">
+          <strong>Schweitzer Mountain · Summer Chairlift &amp; Hiking</strong>
+          June is when Schweitzer opens summer operations. Chairlift to the summit (no climb required), then easy walks along the ridgeline with 360-degree views of Lake Pend Oreille, the Selkirks, and into Montana. Lunch at Chimney Rock Grill. 90 minutes north of CDA.
+        </div>
+      </li>
+      <li>
+        <div class="tip-num">🚴</div>
+        <div class="tip-content">
+          <strong>Trail of the Coeur d'Alenes · Harrison Loop · 30 mi</strong>
+          The Pacific Northwest's longest rail trail. Park in Harrison, ride to Cataldo and back along the Coeur d'Alene River chain of lakes. Eagles, ospreys, and one of the most underrated bike rides in the West. Pair with lunch at the Springs Restaurant in Harrison.
+        </div>
+      </li>
+    </ul>
+    <p style="margin-top:14px;font-size:13px;color:var(--muted);font-style:italic;">Wildfire season starts in late June. Check conditions before any backcountry trip; if you smell smoke, choose a different valley. A Discover Pass is required for Washington State Parks; Idaho State Parks have day-use fees at most trailheads. AllTrails and WTA.org have current condition reports.</p>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <!-- Top row: logo + photo side by side -->
+    <div style="display:flex;align-items:center;gap:24px;margin-bottom:24px;padding-bottom:20px;border-bottom:1px solid rgba(255,255,255,0.12);">
+      <!-- Logo -->
+      <img src="https://assets.cdn.filesafe.space/G69rIMStyzDP6ouQs8t3/media/6a035373f07c4898896894ac.png" alt="Major Key Group" style="width:80px;height:80px;object-fit:contain;flex-shrink:0;" />
+      <!-- Team photo -->
+      <img src="https://assets.cdn.filesafe.space/G69rIMStyzDP6ouQs8t3/media/6a0354570c09109fd5613772.jpg" alt="William Tullis &amp; Kaya Kennedy" style="width:110px;height:110px;object-fit:cover;object-position:center top;border-radius:4px;flex-shrink:0;" />
+      <!-- Names + tagline -->
+      <div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:18px;color:#fff;line-height:1.2;margin-bottom:4px;">William Tullis &amp; Kaya Kennedy</div>
+        <div style="font-size:12px;color:rgba(255,255,255,0.6);letter-spacing:1px;text-transform:uppercase;margin-bottom:6px;">Major Key Group · KW</div>
+        <div style="font-size:12px;color:rgba(255,255,255,0.5);">Serving Eastern Washington &amp; North Idaho</div>
+      </div>
+    </div>
+
+    <!-- Contact columns -->
+    <div class="footer-cols">
+      <div>
+        <strong>Contact Us</strong>
+        📞 <a href="tel:5095650026">(509) 565-0026</a><br>
+        ✉ <a href="mailto:majorkeygroup@kw.com">majorkeygroup@kw.com</a><br>
+        🌐 <a href="https://majorkeygroup.com">majorkeygroup.com</a>
+      </div>
+      <div>
+        <strong>Follow Along</strong>
+        Instagram: <a href="https://instagram.com/majorkeygroup">@majorkeygroup</a><br>
+        Facebook: <a href="https://facebook.com/majorkeygroup">facebook.com/majorkeygroup</a><br><br>
+        <span style="font-size:11px;color:rgba(255,255,255,0.4);">Know someone buying or selling? Referrals are the highest compliment. Thank you for sharing.</span>
+      </div>
+    </div>
+    <div class="footer-disclaimer">
+      Market data sourced from Spokane REALTORS®, MLS of CDA Regional REALTORS® / InfoSparks, Houzeo, and the 2026 Spokane Real Estate Market Forum. All figures are approximate and subject to change. This newsletter is for informational purposes only and is not intended as a solicitation of property currently listed for sale or a representation of any kind. Buyers and sellers should consult with their own real estate, legal, tax, and financial advisors before acting on any information contained here. Major Key Group is a team of licensed real estate professionals with Keller Williams Realty Coeur d'Alene (Idaho) and Keller Williams Realty Spokane (Washington). Equal Housing Opportunity.
+    </div>
+  </div>
+
+</div>
+
+<!-- ── AUTO-HEIGHT: report document height to a parent page when embedded as an iframe ── -->
+<script>
+(function(){
+  function postHeight(){
+    var h = Math.max(
+      document.body.scrollHeight,
+      document.documentElement.scrollHeight,
+      document.body.offsetHeight,
+      document.documentElement.offsetHeight
+    );
+    parent.postMessage({ mkgNewsletterHeight: h }, '*');
+  }
+  window.addEventListener('load', postHeight);
+  window.addEventListener('resize', postHeight);
+  // charts and fonts settle after first paint — re-measure a few times
+  [300, 800, 1500, 3000].forEach(function(t){ setTimeout(postHeight, t); });
+})();
+</script>
+</body>
+</html>
