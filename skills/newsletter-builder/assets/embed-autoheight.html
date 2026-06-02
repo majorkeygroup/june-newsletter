@@ -1,0 +1,24 @@
+<!--
+  AUTO-HEIGHT RESPONSIVE EMBED — use ONLY on hosts that execute inline <script>
+  (e.g. a Luxury Presence landing-page Custom Code section, WordPress Custom HTML,
+  a raw HTML page). Fits the newsletter exactly with zero trailing whitespace.
+
+  Requires the newsletter page to broadcast its height via postMessage — the
+  template already includes that script (see SKILL.md "Auto-height reporter").
+  If the host strips <script>, use embed-luxury-presence.html instead.
+-->
+<iframe
+  id="mkg-newsletter"
+  src="https://june-newsletter-majorkeygroup.netlify.app/"
+  title="Inland NW Real Estate | June 2026"
+  style="width:100%;max-width:816px;height:6000px;border:0;display:block;margin:0 auto;"
+  loading="lazy"
+  scrolling="no"
+></iframe>
+<script>
+  window.addEventListener('message', function (e) {
+    if (e.data && e.data.mkgNewsletterHeight) {
+      document.getElementById('mkg-newsletter').style.height = e.data.mkgNewsletterHeight + 'px';
+    }
+  });
+</script>

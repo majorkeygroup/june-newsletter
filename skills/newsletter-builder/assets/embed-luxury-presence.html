@@ -1,0 +1,29 @@
+<!--
+  LUXURY PRESENCE (and any host that strips <script>) — NO-JAVASCRIPT RESPONSIVE EMBED.
+  Paste into a Luxury Presence blog "Embed / Code / HTML" block.
+
+  Why CSS-only: cross-origin auto-height needs JavaScript on the parent page, and
+  Luxury Presence sanitizes <script> tags inside blog content. A reflowing page's
+  height changes a lot with width (≈17,600px on a phone, ≈11,000px on desktop), so
+  the height is stepped by width with media queries. Each step is set slightly tall
+  to guarantee no cutoff (the trade-off is a little trailing whitespace).
+
+  The height numbers below are specific to the June 2026 newsletter. If the content
+  length changes, RE-MEASURE (see SKILL.md "Generating the no-JS embed") and update.
+-->
+<style>
+  .mkg-frame{width:100%;max-width:816px;height:19500px;border:0;display:block;margin:0 auto}
+  @media(min-width:360px){.mkg-frame{height:17600px}}
+  @media(min-width:390px){.mkg-frame{height:16200px}}
+  @media(min-width:414px){.mkg-frame{height:15300px}}
+  @media(min-width:480px){.mkg-frame{height:13700px}}
+  @media(min-width:540px){.mkg-frame{height:12700px}}
+  @media(min-width:541px){.mkg-frame{height:13100px}}
+  @media(min-width:620px){.mkg-frame{height:11900px}}
+  @media(min-width:700px){.mkg-frame{height:11300px}}
+  @media(min-width:816px){.mkg-frame{height:11000px}}
+</style>
+<iframe class="mkg-frame"
+  src="https://june-newsletter-majorkeygroup.netlify.app/"
+  title="Inland NW Real Estate | June 2026"
+  loading="lazy" scrolling="no"></iframe>
