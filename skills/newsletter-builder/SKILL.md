@@ -104,6 +104,28 @@ newsletter's length changes, re-measure and regenerate:
 Height falls as width grows (a phone is ~17.6k tall; desktop caps ~11k at the 816 column).
 Note the small bump at 541px where the tablet breakpoint restores 2-column grids.
 
+## Email version (email-safe HTML)
+
+`assets/email-template.html` is a **separate, email-client-safe** build of the same
+edition — for sending via Mailchimp / Constant Contact / kvCORE / etc. Email rendering
+engines differ hard from browsers, so this version follows email rules, NOT the web ones:
+
+- **Table-based layout only** — no flexbox/grid/CSS positioning. Nested `<table role="presentation">`.
+- **Inline styles** on every element (clients strip much of `<head><style>`); the `<style>`
+  block is limited to web-font `@import` and a small `max-width:620px` media query for mobile stacking.
+- **Web-safe fonts** with the brand serif as progressive enhancement: `'Cormorant Garamond',Georgia,serif`
+  (Apple Mail gets the brand font; everything else falls back to Georgia) and `Arial,Helvetica,sans-serif` for body.
+- **600px** container (email norm), not 816.
+- **No JavaScript → no Chart.js.** The charts section is replaced with a "View Charts & Data Online"
+  button linking to the live Netlify page. Bulletproof (VML) buttons for Outlook via `<!--[if mso]>`.
+- Dark blocks use both `bgcolor="..."` attribute and inline `background-color` (Outlook needs the attribute).
+- Images use absolute https URLs; include `alt` and explicit width/height.
+- Keep the hidden **preheader**, a "View in browser" link, and an **unsubscribe** line
+  (`%unsubscribe_url%` — replace with your ESP's merge tag). Required for CAN-SPAM.
+
+Regenerate it alongside the web edition each month (same data), then test by sending to
+Gmail + Outlook + Apple Mail (or Litmus/Email on Acid) before a real send.
+
 ## Monthly content checklist
 
 - [ ] Masthead month/year + `<title>`
